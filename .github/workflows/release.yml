@@ -42,7 +42,9 @@ jobs:
           if [ -d "ui" ]; then
             cd ui
             npm install
+            cd ..
           fi
+          npm run build
 
       - name: Generate application icons
         run: |
