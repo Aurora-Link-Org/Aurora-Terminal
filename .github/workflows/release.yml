@@ -25,8 +25,10 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Rust stable
-        uses: dtolnay/rust-toolchain@stable
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: 1.84.0
 
       - name: Install dependencies (Ubuntu only)
         if: matrix.platform == 'ubuntu-22.04'
@@ -43,18 +45,6 @@ jobs:
             cd ui
             npm install
             cd ..
-          fi
-
-      - name: Update Rust dependencies
-        shell: bash
-        run: |
-          # 自动升级有 bug 的第三方库（如 extism 和 cap-std）
-          if [ -d "src/src-tauri" ]; then
-            cd src/src-tauri
-            cargo update
-          elif [ -d "src-tauri" ]; then
-            cd src-tauri
-            cargo update
           fi
 
       - name: Generate application icons
