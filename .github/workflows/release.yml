@@ -32,7 +32,7 @@ jobs:
         if: matrix.platform == 'ubuntu-22.04'
         run: |
           sudo apt-get update
-          sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
+          sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf libudev-dev
 
       - name: Install frontend dependencies
         shell: bash
@@ -44,7 +44,18 @@ jobs:
             npm install
             cd ..
           fi
-          npm run build
+
+      - name: Update Rust dependencies
+        shell: bash
+        run: |
+          # 自动升级有 bug 的第三方库（如 extism 和 cap-std）
+          if [ -d "src/src-tauri" ]; then
+            cd src/src-tauri
+            cargo update
+          elif [ -d "src-tauri" ]; then
+            cd src-tauri
+            cargo update
+          fi
 
       - name: Generate application icons
         run: |
