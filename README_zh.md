@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="images/logo.png" alt="Aurora Terminal Logo" width="128" style="border-radius: 50%;">
+  <img src="images/logo.png" alt="Aurora Terminal Logo" width="150">
   <h1>Aurora Terminal</h1>
   <p>一个基于 Rust 和 React 构建的高性能、可扩展、现代化的终端模拟器。</p>
 
@@ -16,9 +16,12 @@
   </p>
 </div>
 
+<br>
+
 <div align="center">
-  <img src="images/screenshot1.png" alt="Screenshot 1" width="48%">
-  <img src="images/screenshot2.png" alt="Screenshot 2" width="48%">
+  <img src="images/screenshot1.png" alt="终端主界面" width="800">
+  <br><br>
+  <img src="images/screenshot2.png" alt="设置界面" width="800">
 </div>
 
 ## ✨ 特性

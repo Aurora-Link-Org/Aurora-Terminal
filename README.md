@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="images/logo.png" alt="Aurora Terminal Logo" width="128" style="border-radius: 50%;">
+  <img src="images/logo.png" alt="Aurora Terminal Logo" width="150">
   <h1>Aurora Terminal</h1>
   <p>A high-performance, extensible, and modern terminal emulator built with Rust and React.</p>
 
@@ -16,9 +16,12 @@
   </p>
 </div>
 
+<br>
+
 <div align="center">
-  <img src="images/screenshot1.png" alt="Screenshot 1" width="48%">
-  <img src="images/screenshot2.png" alt="Screenshot 2" width="48%">
+  <img src="images/screenshot1.png" alt="Terminal Interface" width="800">
+  <br><br>
+  <img src="images/screenshot2.png" alt="Settings Interface" width="800">
 </div>
 
 ## ✨ Features
