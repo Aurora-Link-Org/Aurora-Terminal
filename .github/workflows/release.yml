@@ -25,10 +25,8 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Rust
-        uses: dtolnay/rust-toolchain@master
-        with:
-          toolchain: 1.94.0 # 锁定为你本地的版本
+      - name: Install Rust stable
+        uses: dtolnay/rust-toolchain@stable
 
       - name: Install dependencies (Ubuntu only)
         if: matrix.platform == 'ubuntu-22.04'
@@ -47,6 +45,17 @@ jobs:
             cd ..
           fi
 
+      - name: Update Rust dependencies
+        shell: bash
+        run: |
+          if [ -d "src/src-tauri" ]; then
+            cd src/src-tauri
+            cargo update
+          elif [ -d "src-tauri" ]; then
+            cd src-tauri
+            cargo update
+          fi
+
       - name: Generate application icons
         run: |
           cd src
@@ -57,7 +66,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          projectPath: './src'
+         
+          projectPath: './src/src-tauri'
           tagName: ${{ github.ref_name }}
           releaseName: 'Aurora Terminal ${{ github.ref_name }}'
           releaseBody: 'See the assets to download this version and install.'
