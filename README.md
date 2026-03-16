@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="images/logo.png" alt="Aurora Terminal Logo" width="150">
+  <img src="images/logo-background.png" alt="Aurora Terminal Logo" width="150">
   <h1>Aurora Terminal</h1>
   <p>A high-performance, extensible, and modern terminal emulator built with Rust and React.</p>
 
@@ -57,24 +57,26 @@ For more details on plugin development, see the [Plugin Development Guide](docs/
    cd aurora-terminal
    ```
 
-2. Install frontend dependencies (Run this in the root directory, NOT in `src` or `src-tauri`):
+2. Install frontend dependencies:
    ```bash
+   cd src
    npm install
+   cd ..
    ```
 
 3. Generate application icons (Required before first run/build):
    ```bash
-   npm run tauri icon images/logo.png
+   npx @tauri-apps/cli@^2.0.0 icon images/logo-background.png
    ```
 
 4. Run in development mode (This will automatically start both the React frontend and the Rust backend):
    ```bash
-   npm run tauri dev
+   npx @tauri-apps/cli@^2.0.0 dev
    ```
 
 5. Build for production (This will automatically compile both frontend and backend into a single executable):
    ```bash
-   npm run tauri build
+   npx @tauri-apps/cli@^2.0.0 build
    ```
 
 ## 📚 Documentation

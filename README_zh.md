@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="images/logo.png" alt="Aurora Terminal Logo" width="150">
+  <img src="images/logo-background.png" alt="Aurora Terminal Logo" width="150">
   <h1>Aurora Terminal</h1>
   <p>一个基于 Rust 和 React 构建的高性能、可扩展、现代化的终端模拟器。</p>
 
@@ -57,24 +57,26 @@ Aurora Terminal 使用独特的 **微内核 + 消息传递** 架构：
   cd Aurora-Terminal
   ```
 
-2. 安装前端依赖 (请在项目根目录下运行，**不要**进入 `src` 或 `src-tauri` 目录):
+2. 安装前端依赖:
   ```bash
+  cd src
   npm install
+  cd ..
   ```
 
 3. 生成应用图标 (首次运行或构建前必须执行):
   ```bash
-  npm run tauri icon images/logo.png
+  npx @tauri-apps/cli@^2.0.0 icon images/logo-background.png
   ```
 
 4. 在开发模式下运行 (这会自动启动 React 前端和 Rust 后端):
   ```bash
-  npm run tauri dev
+  npx @tauri-apps/cli@^2.0.0 dev
   ```
 
 5. 构建生产版本 (这会自动将前端和后端编译打包成一个可执行文件):
   ```bash
-  npm run tauri build
+  npx @tauri-apps/cli@^2.0.0 build
   ```
 
 ## 📚 文档
