@@ -61,6 +61,12 @@ For more details on plugin development, see the [Plugin Development Guide](docs/
    ```bash
    cd src
    npm install
+   # If you have a ui directory, install its dependencies too
+   if [ -d "ui" ]; then
+     cd ui
+     npm install
+     cd ..
+   fi
    cd ..
    ```
 

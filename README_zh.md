@@ -61,6 +61,12 @@ Aurora Terminal 使用独特的 **微内核 + 消息传递** 架构：
   ```bash
   cd src
   npm install
+  # 如果存在 ui 目录，也需要安装其依赖
+  if [ -d "ui" ]; then
+    cd ui
+    npm install
+    cd ..
+  fi
   cd ..
   ```
 
