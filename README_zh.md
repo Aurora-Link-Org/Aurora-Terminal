@@ -1,5 +1,9 @@
 <div align="center">
+<<<<<<< HEAD
   <img src="images/logo.png" alt="Aurora Terminal Logo" width="150">
+=======
+  <img src="images/logo.png" alt="Aurora Terminal Logo" width="128" style="border-radius: 50%;">
+>>>>>>> 383362ca4d67f9ddf70f6c361224f0b160e2e1db
   <h1>Aurora Terminal</h1>
   <p>一个基于 Rust 和 React 构建的高性能、可扩展、现代化的终端模拟器。</p>
 
@@ -16,12 +20,18 @@
   </p>
 </div>
 
+<<<<<<< HEAD
 <br>
 
 <div align="center">
   <img src="images/screenshot1.png" alt="终端主界面" width="800">
   <br><br>
   <img src="images/screenshot2.png" alt="设置界面" width="800">
+=======
+<div align="center">
+  <img src="images/screenshot1.png" alt="Screenshot 1" width="48%">
+  <img src="images/screenshot2.png" alt="Screenshot 2" width="48%">
+>>>>>>> 383362ca4d67f9ddf70f6c361224f0b160e2e1db
 </div>
 
 ## ✨ 特性
@@ -62,17 +72,25 @@ Aurora Terminal 使用独特的 **微内核 + 消息传递** 架构：
   npm install
   ```
 
+<<<<<<< HEAD
 3. 生成应用图标 (首次运行或构建前必须执行):
   ```bash
   npm run tauri icon images/logo.png
   ```
 
 4. 在开发模式下运行 (这会自动启动 React 前端和 Rust 后端):
+=======
+3. 在开发模式下运行 (这会自动启动 React 前端和 Rust 后端):
+>>>>>>> 383362ca4d67f9ddf70f6c361224f0b160e2e1db
   ```bash
   npm run tauri dev
   ```
 
+<<<<<<< HEAD
 5. 构建生产版本 (这会自动将前端和后端编译打包成一个可执行文件):
+=======
+4. 构建生产版本 (这会自动将前端和后端编译打包成一个可执行文件):
+>>>>>>> 383362ca4d67f9ddf70f6c361224f0b160e2e1db
   ```bash
   npm run tauri build
   ```

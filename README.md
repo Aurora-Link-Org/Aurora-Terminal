@@ -1,5 +1,9 @@
 <div align="center">
+<<<<<<< HEAD
   <img src="images/logo.png" alt="Aurora Terminal Logo" width="150">
+=======
+  <img src="images/logo.png" alt="Aurora Terminal Logo" width="128" style="border-radius: 50%;">
+>>>>>>> 383362ca4d67f9ddf70f6c361224f0b160e2e1db
   <h1>Aurora Terminal</h1>
   <p>A high-performance, extensible, and modern terminal emulator built with Rust and React.</p>
 
@@ -16,12 +20,18 @@
   </p>
 </div>
 
+<<<<<<< HEAD
 <br>
 
 <div align="center">
   <img src="images/screenshot1.png" alt="Terminal Interface" width="800">
   <br><br>
   <img src="images/screenshot2.png" alt="Settings Interface" width="800">
+=======
+<div align="center">
+  <img src="images/screenshot1.png" alt="Screenshot 1" width="48%">
+  <img src="images/screenshot2.png" alt="Screenshot 2" width="48%">
+>>>>>>> 383362ca4d67f9ddf70f6c361224f0b160e2e1db
 </div>
 
 ## ✨ Features
@@ -62,17 +72,25 @@ For more details on plugin development, see the [Plugin Development Guide](docs/
    npm install
    ```
 
+<<<<<<< HEAD
 3. Generate application icons (Required before first run/build):
    ```bash
    npm run tauri icon images/logo.png
    ```
 
 4. Run in development mode (This will automatically start both the React frontend and the Rust backend):
+=======
+3. Run in development mode (This will automatically start both the React frontend and the Rust backend):
+>>>>>>> 383362ca4d67f9ddf70f6c361224f0b160e2e1db
    ```bash
    npm run tauri dev
    ```
 
+<<<<<<< HEAD
 5. Build for production (This will automatically compile both frontend and backend into a single executable):
+=======
+4. Build for production (This will automatically compile both frontend and backend into a single executable):
+>>>>>>> 383362ca4d67f9ddf70f6c361224f0b160e2e1db
    ```bash
    npm run tauri build
    ```
