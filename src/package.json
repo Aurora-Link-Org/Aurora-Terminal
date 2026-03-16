@@ -1,0 +1,9 @@
+{
+  "name": "aurora-terminal-root",
+  "private": true,
+  "scripts": {
+    "init": "cd ui && npm install",
+    "dev": "cd ui && npm run tauri:dev",
+    "build": "cd ui && npm run tauri:build"
+  }
+}
