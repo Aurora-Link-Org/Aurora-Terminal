@@ -39,35 +39,25 @@ jobs:
         run: |
           cd src
           npm install
-          if [ -d "ui" ]; then
-            cd ui
-            npm install
-            cd ..
-          fi
+          npm run init
 
       - name: Update Rust dependencies
         shell: bash
         run: |
-          if [ -d "src/src-tauri" ]; then
-            cd src/src-tauri
-            cargo update
-          elif [ -d "src-tauri" ]; then
-            cd src-tauri
-            cargo update
-          fi
+          cd src/src-tauri
+          cargo update
 
       - name: Generate application icons
         run: |
           cd src
-          npx @tauri-apps/cli@^2.0.0 icon ../images/logo-background.png
+          npx @tauri-apps/cli@^2.0.0 icon images/logo-background.png || echo "Icon generation failed or skipped"
 
       - name: Build and Release Tauri app
         uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-         
-          projectPath: './src/src-tauri'
+          projectPath: './src'
           tagName: ${{ github.ref_name }}
           releaseName: 'Aurora Terminal ${{ github.ref_name }}'
           releaseBody: 'See the assets to download this version and install.'

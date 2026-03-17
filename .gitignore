@@ -14,6 +14,7 @@ src-tauri/icons/
 src/src-tauri/icons/
 src-tauri/gen/
 src/src-tauri/gen/
+Cargo.lock
 
 # OS
 .DS_Store
