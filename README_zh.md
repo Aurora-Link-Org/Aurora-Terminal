@@ -52,38 +52,38 @@ Aurora Terminal 使用独特的 **微内核 + 消息传递** 架构：
 ### 安装
 
 1. 克隆仓库:
-  ```bash
-  git clone https://github.com/Aurora-Link-Org/Aurora-Terminal.git
-  cd Aurora-Terminal
-  ```
+   ```bash
+   git clone https://github.com/Aurora-Link-Org/Aurora-Terminal.git
+   cd Aurora-Terminal
+   ```
 
 2. 安装前端依赖:
-  ```bash
-  cd src
-  npm install
-  # 如果存在 ui 目录，也需要安装其依赖
-  if [ -d "ui" ]; then
-    cd ui
-    npm install
-    cd ..
-  fi
-  cd ..
-  ```
+   ```bash
+   cd src
+   npm install
+   npm run init
+   ```
 
 3. 生成应用图标 (首次运行或构建前必须执行):
-  ```bash
-  npx @tauri-apps/cli@^2.0.0 icon images/logo-background.png
-  ```
+   ```bash
+   cd src
+   npx @tauri-apps/cli@^2.0.0 icon images/logo-background.png
+   ```
 
 4. 在开发模式下运行 (这会自动启动 React 前端和 Rust 后端):
-  ```bash
-  npx @tauri-apps/cli@^2.0.0 dev
-  ```
+   ```bash
+   cd src
+   npm run dev
+   ```
 
 5. 构建生产版本 (这会自动将前端和后端编译打包成一个可执行文件):
-  ```bash
-  npx @tauri-apps/cli@^2.0.0 build
-  ```
+   ```bash
+   cd src
+   npm run build
+   ```
+
+   > **💡 关于安装包打包的说明：**
+   > 默认情况下，构建命令可能只会生成独立的可执行文件。如果你希望生成完整的安装包（如 `.exe`, `.msi`, `.dmg`, `.deb`, `.AppImage` 等），请在运行构建命令前，打开 `src/src-tauri/tauri.conf.json` 文件，找到 `"bundle"` 节点，并将其中的 `"active": false` 修改为 `"active": true`。
 
 ## 📚 文档
 

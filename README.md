@@ -53,37 +53,37 @@ For more details on plugin development, see the [Plugin Development Guide](docs/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/aurora-terminal.git
-   cd aurora-terminal
+   git clone https://github.com/Aurora-Link-Org/Aurora-Terminal.git
+   cd Aurora-Terminal
    ```
 
 2. Install frontend dependencies:
    ```bash
    cd src
    npm install
-   # If you have a ui directory, install its dependencies too
-   if [ -d "ui" ]; then
-     cd ui
-     npm install
-     cd ..
-   fi
-   cd ..
+   npm run init
    ```
 
 3. Generate application icons (Required before first run/build):
    ```bash
+   cd src
    npx @tauri-apps/cli@^2.0.0 icon images/logo-background.png
    ```
 
 4. Run in development mode (This will automatically start both the React frontend and the Rust backend):
    ```bash
-   npx @tauri-apps/cli@^2.0.0 dev
+   cd src
+   npm run dev
    ```
 
 5. Build for production (This will automatically compile both frontend and backend into a single executable):
    ```bash
-   npx @tauri-apps/cli@^2.0.0 build
+   cd src
+   npm run build
    ```
+
+   > **💡 Note on Installers/Bundles:**
+   > By default, the build command might only generate the standalone executable. If you want to generate full installation packages (like `.exe`, `.msi`, `.dmg`, `.deb`, `.AppImage`), you need to open the `src/src-tauri/tauri.conf.json` file, find the `"bundle"` section, and change `"active": false` to `"active": true` before running the build command.
 
 ## 📚 Documentation
 
