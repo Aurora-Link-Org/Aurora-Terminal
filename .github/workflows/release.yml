@@ -25,10 +25,8 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Rust
-        uses: dtolnay/rust-toolchain@master
-        with:
-          toolchain: 1.84.0
+      - name: Install Rust stable
+        uses: dtolnay/rust-toolchain@stable
 
       - name: Install dependencies (Ubuntu only)
         if: matrix.platform == 'ubuntu-22.04'
@@ -42,12 +40,6 @@ jobs:
           cd src
           npm install
           npm run init
-
-      - name: Update Rust dependencies
-        shell: bash
-        run: |
-          cd src/src-tauri
-          cargo update
 
       - name: Generate application icons
         run: |
